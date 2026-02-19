@@ -1,4 +1,5 @@
 # All blobs are from ADVAN_X1-user 14 UP1A.231005.007 1751475349 release-keys unless noted or pinned
+## 6781 package version: ADVAN_X1-user 14 UP1A.231005.007 1751475349, unless stated otherwise
 
 # AEE
 vendor/lib/libaedv.so
