@@ -95,6 +95,10 @@ on property:sys.boot_completed=1
     write /sys/block/sdb/queue/nr_requests 64
     write /sys/block/sdc/queue/nr_requests 64
 
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
     # restore boot perf. tune
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
@@ -166,7 +170,6 @@ on property:sys.boot_completed=1
 
     # zram
     swapon_all /vendor/etc/fstab.zram
-    write /proc/sys/vm/swappiness 60
 
     # Adjust watermark level
     write /proc/sys/vm/watermark_scale_factor 200
