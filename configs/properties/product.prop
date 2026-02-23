@@ -32,3 +32,6 @@ debug.hwui.skia_use_perfetto_track_events=false
 
 # RKP
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# zRAM
+ro.zram_backing_device_min_free_mb=1536
