@@ -20,18 +20,6 @@
       ]
     },
     {
-      "Name": "GPUBlockBoost",
-      "Path": "/sys/kernel/ged/hal/gpu_boost_level",
-      "Values": [
-        "101",
-        "50",
-        "0",
-        "-1"
-      ],
-      "ResetOnInit": true,
-      "DefaultIndex": 2
-    },
-    {
       "Name": "GpuPwrLevel",
       "Path": "/proc/gpufreqv2/fix_target_opp_index",
       "Values": [
@@ -424,12 +412,6 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 1000,
       "Value": "2000000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUBlockBoost",
-      "Duration": 0,
-      "Value": "101"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
