@@ -7,6 +7,9 @@ DEVICE_PATH := device/advan/X1
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 COMMON_GKI_PATH := device/millennium/common-kernel
 
+# Config kernel
+TARGET_KERNEL_CONFIG := gki_defconfig
+
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
 
@@ -81,7 +84,7 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 TARGET_NO_KERNEL_OVERRIDE := true
-LOCAL_KERNEL := $(COMMON_GKI_PATH)/Image.gz
+LOCAL_KERNEL := $(COMMON_GKI_PATH)/chihiro/Image.gz
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
 
