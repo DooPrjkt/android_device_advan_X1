@@ -149,7 +149,8 @@ PRODUCT_COPY_FILES += \
 # Modules
 PRODUCT_PACKAGES += \
     init.insmod.sh \
-    init.insmod.mt6789.cfg
+    init.insmod.mt6789.cfg \
+    chipinfo
 
 # NFC
 PRODUCT_PACKAGES += \
