@@ -9,6 +9,13 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "chipinfo",
+    src: "chipinfo.sh",
+    init_rc: ["chipinfo.rc"],
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.insmod.mt6789.cfg",
     src: "init.insmod.mt6789.cfg",
