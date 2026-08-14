@@ -150,6 +150,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.insmod.sh \
     init.insmod.mt6789.cfg \
+    wlan_assistant \
     chipinfo
 
 # NFC
