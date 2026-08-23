@@ -13,6 +13,8 @@ $(call inherit-product, device/advan/X1/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+PERF_ANIM_OVERRIDE := true
+
 PRODUCT_NAME := lineage_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
