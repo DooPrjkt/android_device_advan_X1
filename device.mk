@@ -6,7 +6,7 @@
 # Inherit generic_ramdisk product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
--include vendor/lineage-priv/keys/keys.mk
+# -include vendor/lineage-priv/keys/keys.mk
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
 
 # Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)
+# $(call inherit-product, vendor/sony/dolby/setup.mk)
 
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
