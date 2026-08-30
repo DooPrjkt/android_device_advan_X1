@@ -163,9 +163,6 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
