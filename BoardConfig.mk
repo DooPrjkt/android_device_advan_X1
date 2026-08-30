@@ -126,7 +126,7 @@ BOARD_USES_METADATA_PARTITION := true
 BOARD_EROFS_PCLUSTER_SIZE := 262144
 BOARD_EROFS_COMPRESSOR := lz4hc,9
 
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/custom/config/BoardConfigReservedSize.mk
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 104857600 #100MB
 
 # Partitions - Dynamic
