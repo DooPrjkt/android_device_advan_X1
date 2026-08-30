@@ -171,6 +171,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_PACKAGES += \
     ApertureOverlayX1 \
     FrameworkResOverlayX1 \
@@ -178,9 +179,7 @@ PRODUCT_PACKAGES += \
     NfcResOverlayX1 \
     PowerOffAlarmOverlayX1 \
     SettingsOverlayX1 \
-    SystemUIOverlayX1 \
-    TetheringOverlayX1 \
-    WifiOverlayX1
+    SystemUIOverlayX1
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -244,6 +243,9 @@ PRODUCT_PACKAGES += \
 
 # Properties
 include $(LOCAL_PATH)/configs/properties/vendor_logtag.mk
+
+# Radio
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sensors
 PRODUCT_COPY_FILES += \
