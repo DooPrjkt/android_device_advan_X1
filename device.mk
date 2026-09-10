@@ -266,6 +266,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
     hardware/mediatek \
+    hardware/mediatek/libaedv \
     hardware/mediatek/wlan/wifi_hal \
     hardware/mediatek/libmtkperf_client \
     hardware/lineage/interfaces/power-libperfmgr
