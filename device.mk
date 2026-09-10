@@ -263,11 +263,11 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
+    hardware/mediatek/wlan/wifi_hal \
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/libaedv \
     hardware/google/pixel \
     hardware/mediatek \
-    hardware/mediatek/wlan/wifi_hal \
-    hardware/mediatek/libmtkperf_client
-
 # Task Profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
