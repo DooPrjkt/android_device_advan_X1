@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Compressed Virtual A/B
-ifneq ($(WITH_GMS),true)
+ifneq ($(WITH_GAPPS),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 TARGET_RO_FILE_SYSTEM_TYPE := ext4
 else

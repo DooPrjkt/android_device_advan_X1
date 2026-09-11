@@ -10,12 +10,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/advan/X1/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common InfinityX stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
+# Infinty Flags
 PERF_ANIM_OVERRIDE := true
+INFINITY_MAINTAINER := Doo
+WITH_GAPPS := true
 
-PRODUCT_NAME := lineage_X1
+PRODUCT_NAME := infinity_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
 PRODUCT_BRAND := ADVAN
