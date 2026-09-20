@@ -130,6 +130,10 @@ on post-fs-data
     chmod 0771 /mnt/vendor/nvdata
     mkdir /mnt/vendor/nvdata/media 0771 media audio
 
+    # Water Camera
+    mkdir /data/vendor/.water 0777 system camera
+    restorecon /data/vendor/.water
+
     # Audio dump
     mkdir /data/vendor/audiohal 0771 system audio
     mkdir /data/vendor/audiohal/audio_param 0771 system audio
