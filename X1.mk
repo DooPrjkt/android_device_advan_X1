@@ -13,6 +13,12 @@ $(call inherit-product, device/advan/X1/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
+# Flags
+ASCP_MAINTAINER := Doo
+ASCP_MAINTAINER_LINK := https://t.me/Mikudocumet
+WITH_REVANCED := true
+WITH_GMS := true
+
 PRODUCT_NAME := custom_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
