@@ -356,7 +356,15 @@ on post-fs-data
     chmod 0664 /sys/devices/platform/soc/11eb3000.i2c/i2c-9/9-005a/leds/vibrator/brightness
     chmod 0664 /sys/devices/platform/soc/11eb3000.i2c/i2c-9/9-005a/leds/vibrator/duration
     #prize add by liutuo gor linear-motor end
-	
+
+# Cpu min & max
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+
 # End of adding by MTK drivers
 # -----------------------
 on zygote-start

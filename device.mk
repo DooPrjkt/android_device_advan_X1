@@ -6,8 +6,6 @@
 # Inherit generic_ramdisk product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
--include vendor/lineage-priv/keys/keys.mk
-
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -89,7 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
@@ -303,6 +301,10 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# AxKernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/kernel/ax_kernel_manager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_kernel_manager.xml
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/advan/X1/X1-vendor.mk)
