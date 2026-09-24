@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# Pricam
+$(call inherit-product, device/prize/camera/common.mk)
+
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
@@ -173,7 +176,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_PACKAGES += \
-    ApertureOverlayX1 \
     FrameworkResOverlayX1 \
     Launcher3OverlayX1 \
     NfcResOverlayX1 \
