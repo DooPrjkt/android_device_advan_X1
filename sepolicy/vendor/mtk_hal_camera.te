@@ -1,2 +1,12 @@
 allow mtk_hal_camera proc_pressure_cpu:file rw_file_perms;
 allow mtk_hal_camera proc_pressure_io:file rw_file_perms;
+
+# watermark
+allow mtk_hal_camera mtk_water_data_file:dir search;
+allow mtk_hal_camera mtk_water_data_file:file r_file_perms;
+
+# debug prop cam.egnsavefile.enable (non-fatal)
+dontaudit mtk_hal_camera default_prop:file read;
+
+# prop kamera
+get_prop(mtk_hal_camera, vendor_camera_prop)

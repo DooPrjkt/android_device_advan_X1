@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+sh_binary {
+    name: "pri_water",
+    src: "pri_water.sh",
+    init_rc: ["pri_water.rc"],
+    vendor: true,
+}
