@@ -1,0 +1,7 @@
+type pri_water, domain;
+type pri_water_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(pri_water)
+
+allow pri_water mtk_water_data_file:dir { search getattr read open };
+allow pri_water mtk_water_data_file:file { getattr setattr open read relabelfrom relabelto };
+allow pri_water self:capability { chown fowner };
