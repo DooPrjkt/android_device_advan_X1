@@ -14,6 +14,7 @@ $(call inherit-product, device/advan/X1/device.mk)
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Infinty Flags
+INFINITY_BUILD_TYPE := OFFICIAL
 PERF_ANIM_OVERRIDE := true
 INFINITY_MAINTAINER := Doo
 WITH_GAPPS := true
