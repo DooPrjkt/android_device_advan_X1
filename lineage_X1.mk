@@ -13,6 +13,14 @@ $(call inherit-product, device/advan/X1/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Flag
+TARGET_INCLUDE_AXFX := false
+TARGET_INCLUDES_LOS_PREBUILTS := false
+AXION_CAMERA_REAR_INFO := 64,12
+AXION_CAMERA_FRONT_INFO := 8
+AXION_MAINTAINER := Doo
+AXION_PROCESSOR := Mediatek_Helio_G100
+
 PRODUCT_NAME := lineage_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
