@@ -18,6 +18,8 @@ vendor.streamout.pcm.dump=0
 vendor.streamin.pcm.dump=0
 
 # Bluetooth
+persist.bluetooth.a2dp_offload.disabled=false
+ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.platform=connac1x
 ro.vendor.mtk.bt_sap_enable?=true
 
