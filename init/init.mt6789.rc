@@ -33,6 +33,10 @@ on init
     chown system system /sys/devices/platform/common_node/gesture
     # pri S33NF3-29 add by xuejian 20240306 end
 
+    #tunning cpu sleep
+    chown system system /dev/cpu_dma_latency
+    chmod 0664 /dev/cpu_dma_latency
+
 on late-init
     write /proc/bootprof "INIT:late-init"
 
