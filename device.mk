@@ -6,7 +6,12 @@
 # Inherit generic_ramdisk product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
--include vendor/lineage-priv/keys/keys.mk
+include vendor/lineage-priv/keys/keys.mk
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Mediatek Helio G100" \
+    RisingMaintainer="Doo"
+
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -87,6 +92,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2460
+TARGET_SCREEN_WIDTH := 1080
 
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
@@ -258,6 +267,9 @@ PRODUCT_PACKAGES += \
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
