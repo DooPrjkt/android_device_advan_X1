@@ -6,8 +6,6 @@
 # Inherit generic_ramdisk product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
--include vendor/lineage-priv/keys/keys.mk
-
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -35,7 +33,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Compressed Virtual A/B
-ifneq ($(WITH_GMS),true)
+ifneq ($(WITH_GAPPS),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 TARGET_RO_FILE_SYSTEM_TYPE := ext4
 else
