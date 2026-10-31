@@ -1,2 +1,13 @@
 allow mtk_hal_camera proc_pressure_cpu:file rw_file_perms;
 allow mtk_hal_camera proc_pressure_io:file rw_file_perms;
+
+# watermark
+allow mtk_hal_camera mtk_water_data_file:dir { add_name getattr ioctl lock open read remove_name search setattr watch watch_reads write };
+allow mtk_hal_camera mtk_water_data_file:file { append create getattr ioctl lock map open read rename setattr unlink watch watch_reads write };
+allow mtk_hal_camera self:capability { chown fowner };
+
+# debug prop cam.egnsavefile.enable (non-fatal)
+dontaudit mtk_hal_camera default_prop:file read;
+
+# prop kamera
+get_prop(mtk_hal_camera, vendor_camera_prop)
