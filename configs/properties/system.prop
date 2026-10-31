@@ -1,5 +1,5 @@
 # Camera
-vendor.debug.camera.single_main2=1
+#vendor.debug.camera.single_main2=1
 
 # Example Defintions
 ro.product.marketname=ADVAN X1
