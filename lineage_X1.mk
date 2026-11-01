@@ -13,6 +13,13 @@ $(call inherit-product, device/advan/X1/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#Lunaris Flag.
+TARGET_ENABLE_FP_OVERRIDE := false
+SURFACE_FLINGER_BOOST := true
+PERF_ANIM_OVERRIDE := true
+TARGET_USE_GPHOTOS := true
+WITH_GMS := true
+
 PRODUCT_NAME := lineage_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
