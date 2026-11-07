@@ -42,6 +42,21 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/mt6789/libmtkcam_metastore.so': blob_fixup()
+    .sig_replace('48 FE 02 94 08 42 82 52',
+                 '48 FE 02 94 08 84 84 52')
+    .sig_replace('43 FE 02 94 08 B2 81 52',
+                 '43 FE 02 94 08 64 83 52')
+    .sig_replace('2B FE 02 94 14 40 82 52',
+                 '2B FE 02 94 14 80 84 52')
+    .sig_replace('26 FE 02 94 17 B0 81 52',
+                 '26 FE 02 94 17 64 83 52')
+    .sig_replace('39 FF 02 94 08 E0 81 52',
+                 '39 FF 02 94 08 84 84 52')
+    .sig_replace('38 FF 02 94 08 0E 81 52',
+                 '38 FF 02 94 08 64 83 52')
+    .sig_replace('08 84 84 52 E8 0B 00 F9 A0 43 01 D1 E1 43 00 91 43 FE 02 94 08 64 83 52 E8 0B 00 F9 A0 43 01 D1 E1 43 00 91 3E FE 02 94 FF 0B 00 F9 A0 43 01 D1 E1 43 00 91 3A FE 02 94 B8 0A 94 52 98 3F A0 72',
+                 '08 84 84 52 E8 0B 00 F9 A0 43 01 D1 E1 43 00 91 43 FE 02 94 08 64 83 52 E8 0B 00 F9 A0 43 01 D1 E1 43 00 91 3E FE 02 94 FF 0B 00 F9 A0 43 01 D1 E1 43 00 91 3A FE 02 94 58 15 88 52 38 7F A0 72'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v31.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')

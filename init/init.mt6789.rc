@@ -138,6 +138,10 @@ on post-fs-data
     mkdir /data/vendor/audiohal 0771 system audio
     mkdir /data/vendor/audiohal/audio_param 0771 system audio
 
+    # Pricam water
+    mkdir /data/vendor/.water 02777 system camera
+    restorecon_recursive /data/vendor/.water
+
     #Create cct mount point
     mkdir /mnt/vendor/cct
     chown root system /mnt/vendor/cct
