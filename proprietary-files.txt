@@ -410,7 +410,6 @@ vendor/lib64/mt6789/libmtkcam_imem.so;SYMLINK=vendor/lib64/libmtkcam_imem.so
 vendor/lib64/mt6789/libmtkcam_imgbuf.so;SYMLINK=vendor/lib64/libmtkcam_imgbuf.so
 vendor/lib64/mt6789/libmtkcam_mapping_mgr.so;SYMLINK=vendor/lib64/libmtkcam_mapping_mgr.so
 vendor/lib64/mt6789/libmtkcam_metadata.so;SYMLINK=vendor/lib64/libmtkcam_metadata.so
-vendor/lib64/mt6789/libmtkcam_metastore.so;SYMLINK=vendor/lib64/libmtkcam_metastore.so
 vendor/lib64/mt6789/libmtkcam_mfb.so;SYMLINK=vendor/lib64/libmtkcam_mfb.so
 vendor/lib64/mt6789/libmtkcam_modulefactory_aaa.so;SYMLINK=vendor/lib64/libmtkcam_modulefactory_aaa.so
 vendor/lib64/mt6789/libmtkcam_modulefactory_custom.so;SYMLINK=vendor/lib64/libmtkcam_modulefactory_custom.so
@@ -521,6 +520,9 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+
+# Pricam
+vendor/lib64/mt6789/libmtkcam_metastore.so;SYMLINK=vendor/lib64/libmtkcam_metastore.so
 
 # Camera Configs
 vendor/etc/bst_face_unlock/bstFaceUnlock.cfg
